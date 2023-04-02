@@ -1,0 +1,4 @@
+data_loader: PDFReader
+name: HtmlLoader
+params:
+  file: Macbeth_Scene_Summaries.pdf

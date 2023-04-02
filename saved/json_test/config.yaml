@@ -1,0 +1,4 @@
+data_loader: JSONReader
+name: JSONLoader
+params:
+  path: /Users/sherifneamatalla/Desktop/projects/indexing/jarvis/src/settings.json

@@ -1,4 +1,0 @@
-data_loader: SimpleWebPageReader
-params:
-  urls:
-  - https://wiki.ubuntu.com/

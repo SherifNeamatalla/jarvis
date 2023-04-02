@@ -13,9 +13,6 @@ from loaders.base_loader import BaseLoader
 from loaders.loader_factory import LoaderFactory
 
 
-os.environ["OPENAI_API_KEY"] = "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"
-
-
 def prompt_for_index():
     print("Do you want to create a new index or load an existing one?")
     print("1. Create new index")

@@ -1,9 +1,14 @@
+from .pdf_loader import PdfLoader
 from .html_loader import HtmlLoader
 from .json_loader import JSONLoader
 
 
 class LoaderFactory:
-    loaders = {"HtmlLoader": HtmlLoader, "JSONLoader": JSONLoader}
+    loaders = {
+        "HtmlLoader": HtmlLoader,
+        "JSONLoader": JSONLoader,
+        "PdfLoader": PdfLoader,
+    }
 
     @staticmethod
     def create_loader(loader_type: str, path: str, params: dict):

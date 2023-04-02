@@ -3,7 +3,7 @@ import os
 import yaml
 from llama_index import GPTSimpleVectorIndex, download_loader
 
-save_path = os.path.join(os.path.dirname(__file__), "..", "..", "saved")
+from util.util import get_save_path
 
 
 class BaseLoader:
@@ -16,7 +16,7 @@ class BaseLoader:
         index: any = None,
     ):
         self.name = name
-        self.path = os.path.join(save_path, path)
+        self.path = get_save_path(path)
         self.params = params
         self.data_loader_name = data_loader_name
         self.index = index
@@ -54,7 +54,7 @@ class BaseLoader:
 
     @staticmethod
     def load_from_path(path: str, loaderTypes):
-        path = os.path.join(save_path, path)
+        path = get_save_path(path)
 
         if not os.path.exists(path):
             raise ValueError("Path does not exist.")
